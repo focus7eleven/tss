@@ -1,0 +1,10 @@
+message req {
+	required uint64 frUid = 1;//发送者userId
+	optional uint32 type = 2; //消息类型
+	optional uint64 toUid = 3;//接收者userId
+	optional uint64 rid = 4;//相关id,比如讨论组Id,合同Id,发布Id等
+	optional uint64 aid = 5;//事务Id
+	optional uint64 toRid = 6;//接收者roleId
+	optional uint64 frRid = 7;//发送者roleId
+	optional uint32 sub = 9;//消息子类型
+}

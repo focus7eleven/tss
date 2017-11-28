@@ -1,6 +1,7 @@
 import React from 'react'
 import Bundle from './components/route/Bundle'
 import AppContainer from './containers/AppContainer'
+import AnnouncementEditor from 'bundle-loader?lazy!./components/editor/AnnouncementEditor'
 
 const Loading = () => (<div>Loading...</div>)
 
@@ -23,6 +24,10 @@ const routes = [{
     path: '/index',
     exact: true,
     component: createComponent(AppContainer)
+  }, {
+    path: '/draft',
+    exact: true,
+    component: createComponent(AnnouncementEditor)
   }]
 }]
 

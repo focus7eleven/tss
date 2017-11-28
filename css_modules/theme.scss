@@ -1,0 +1,65 @@
+/* Color */
+$primary-color: #926dea;
+$primary-hover-color: #6e44cc;
+$primary-light-color: #fbf8ff;
+$success-color: #2c9300;
+$danger-color: #F55B6C;
+$normal-color: #9b9b9b;
+$text-color: #4a4a4a;
+$content-color: #cccccc;
+
+/* Font */
+$font-light: 100;
+$font-normal: 400;
+$font-bold: 500;
+
+/* Base & Require */
+$body-background: #f4f5f6;
+$line-height-base: 1.5;
+
+/* Background color */
+$background-color-base: #f4f5f6;
+$bg-content: #fafafa;
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif,"localant";
+$font-size-base: 14px;
+
+/* Button Height */
+$btn-height-normal: 28px;
+$btn-height-lg: 32px;
+
+/* Border */
+$border-radius-base: 6px;
+$border-radius-sm: 3px;
+
+/* Border color */
+$border-color-base: #d9d9d9;
+$border-color-active: #b499dc;
+$border-color-invalid: #F55B6C;
+
+/* Shadow */
+$shadow-color: rgba(96, 79, 113, 0.12);
+$box-shadow: 0 0 8px 0 $shadow-color;
+
+/* Disabled cursor for form controls and buttons. */
+$cursor-disabled: not-allowed;
+
+/* Link */
+$link-color: #4a90e2;
+$link-active-color: #106cd7;
+
+/* Input 暂用ant design原生. */
+$input-shadow: 0 0 0 2px rgba(179, 152, 220, 0.2);
+$input-invalid-shadow: 0 0 0 2px rgba(255, 50, 0, 0.2);
+
+/* Transition */
+$transition: 1s cubic-bezier(.075,.82,.165,1);
+
+/* Affair */
+$level-1: #7e34f0;
+$level-2: #f89218;
+$level-3: #4aaaff;
+$level-4: #40c176;
+$level-5: #f5b6a1;
+$level-6: #9cb1ef;
+$level-7: #ffe97e;
+$level-8: #d8d8d8;

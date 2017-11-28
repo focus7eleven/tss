@@ -1,0 +1,11 @@
+:local(.link){
+	color: #4a90e2;
+	text-decoration: underline;
+}
+
+:local(.diffEntity) {
+	margin: 3px 0;
+	max-width: 100%;
+	padding: 2px;
+	display: inline-block;
+}

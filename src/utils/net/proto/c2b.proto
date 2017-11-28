@@ -1,0 +1,4 @@
+message c2b {
+	required uint32 code = 1; //请求码
+	optional bytes  data = 2;
+}

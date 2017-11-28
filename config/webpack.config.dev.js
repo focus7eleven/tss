@@ -82,8 +82,10 @@ module.exports = {
         // https://github.com/facebookincubator/create-react-app/issues/253
         modules: [
             'node_modules',
+            'css_modules',
             paths.appNodeModules,
-            path.resolve(paths.appSrc, "utils")
+            path.resolve(paths.appSrc, "utils"),
+            path.resolve(paths.appSrc, "public"),
         ].concat(
         // It is guaranteed to exist because we tweak it in `env.js`
         process.env.NODE_PATH.split(path.delimiter).filter(Boolean)),
@@ -299,16 +301,18 @@ module.exports = {
         ]
     },
     // resolve: {
-    //     extensions: [
-    //         '.js', '.jsx'
-    //     ],
-    //     modules: [
-    //         path.resolve(paths.appSrc, "utils"),
-    //         "node_modules"
-    //     ],
-    //     alias: {
-    //         publicRes: path.resolve(paths.appSrc, "public")
-    //     }
+    //   extensions: [
+    //     '.js', '.jsx'
+    //   ],
+    //   modules: [
+    //     path.resolve(paths.appSrc, "utils"),
+    //     "node_modules",
+    //     path.resolve(paths.rootApp, "css_modules")
+    //   ],
+    //   alias: {
+    //     publicRes: path.resolve(paths.appSrc, "public"),
+    //     actions: path.resolve(paths.appSrc, "actions")
+    //   }
     // },
     plugins: [
         // Makes some environment variables available in index.html.

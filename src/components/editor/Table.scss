@@ -1,0 +1,30 @@
+:local(.container){
+	width: 98%;
+	border-collapse: collapse;
+	border: 1px solid #ccc;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+	:local(.grid){
+		border: 1px solid #ccc;
+		height: 30px;
+		line-height: 30px;
+		font-size: 14px;
+
+		textarea.ant-input{
+			width: 100%;
+			height: 100%;
+			border-width: 0;
+			text-align: left;
+			border-radius: 0;
+			background: rgba(0, 0, 0, 0);
+			color: black;
+			box-shadow: none;
+			resize: none;
+
+			&:focus{
+				outline-width: 0;
+			}
+		}
+	}
+}

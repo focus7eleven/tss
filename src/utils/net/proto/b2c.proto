@@ -1,0 +1,7 @@
+message b2c{
+    required bytes data = 1;
+    optional string requestId =2;
+	repeated uint64 userIds = 3 ;
+    optional uint64 time =4;
+    optional uint32 index = 5;
+}
