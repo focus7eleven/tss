@@ -1,0 +1,43 @@
+@import './theme.scss';
+@import './icon.scss';
+@import './global.scss';
+@import './plyr.scss';
+@import './mixins.scss';
+@import './iconfont.css';
+
+* {
+  box-sizing: border-box;
+  font-family: $font-family;
+  text-size-adjust: none;
+}
+
+html {
+	-webkit-font-smoothing: antialiased;
+}
+
+svg {
+    cursor: pointer;
+}
+
+body {
+	padding: 0;
+	margin: 0px;
+	width: 100vw;
+	height: 100vh;
+	// background-color: white;
+}
+
+// div {
+// 	box-sizing: border-box;
+// }
+//
+// :focus{
+// 	border: none;
+// 	outline: none;
+// }
+//
+// input{
+// 	&:focus{
+// 		border: none!important;
+// 	}
+// }

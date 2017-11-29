@@ -26,7 +26,6 @@ const Option = Select.Option
 
 const initialEmptyRawDraftContentState = convertToRaw(EditorState.createEmpty(EditorDecorator).getCurrentContent())
 
-// const AnnouncementEditor = React.createClass({
 class AnnouncementEditor extends React.Component {
 	static propTypes = {
 		initialDraft: PropTypes.object, // 从草稿开始编辑
@@ -81,7 +80,8 @@ class AnnouncementEditor extends React.Component {
 
 	componentDidMount() {
 		// updateCS: used for passing ContentState to PublishAnnouncementComponent (aims to saving draft)
-		this._savingDraft = _.debounce(this.handleSavingDraft, 3000)
+		this._savingDraft = () => {}
+		// this._savingDraft = _.debounce(this.handleSavingDraft, 3000)
 		this.onChange = (editorState) => this.setState({
 			editorState,
 		})

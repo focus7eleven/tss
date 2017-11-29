@@ -74,7 +74,7 @@ module.exports = {
     // We placed these paths second because we want `node_modules` to "win"
     // if there are any conflicts. This matches Node resolution mechanism.
     // https://github.com/facebookincubator/create-react-app/issues/253
-    modules: ['node_modules', paths.appNodeModules,path.resolve(paths.appSrc, "utils")].concat(
+    modules: [paths.appNodeModules, paths.cssModules, path.resolve(paths.appSrc, "public"), path.resolve(paths.appSrc, "utils")].concat(
       // It is guaranteed to exist because we tweak it in `env.js`
       process.env.NODE_PATH.split(path.delimiter).filter(Boolean)
     ),
@@ -130,26 +130,14 @@ module.exports = {
 
       // "file" loader makes sure those assets end up in the `build` folder.
       // When you `import` an asset, you get its filename.
-      {
-        exclude: [
-          /\.html$/,
-          /\.(js|jsx)$/,
-          /\.css$/,
-          /\.scss$/,
-          /\.less$/,
-          /\.json$/,
-          /\.bmp$/,
-          /\.gif$/,
-          /\.jpe?g$/,
-          /\.png$/,
-        ],
-        loader: require.resolve('file-loader'),
-        options: {
-          name: 'static/media/[name].[hash:8].[ext]',
-        },
-      },
       // "url" loader works just like "file" loader but it also embeds
       // assets smaller than specified size as data URLs to avoid requests.
+      {
+        test: [
+            /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/
+        ],
+        loader: require.resolve('file-loader'),
+      },
       {
         test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
         loader: require.resolve('url-loader'),
@@ -238,8 +226,9 @@ module.exports = {
                       {
                         loader: require.resolve('css-loader'),
                         options: {
-                          importLoaders: 1,
-                          modules:true
+                          // importLoaders: 1,
+                          // modules:true
+                          localIdentName: '[name]__[local]___[hash:base64:5]'
                         },
                       },
                       {

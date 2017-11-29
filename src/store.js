@@ -4,7 +4,7 @@ import { createLogger } from 'redux-logger'
 import { createStore, applyMiddleware, compose } from 'redux'
 import config from './config'
 
-const createMyStore = (rootReducer) => {
+export const createMyStore = (rootReducer) => {
   const middlewares = []
   middlewares.push(thunkMiddleware)
   middlewares.push(callAPIMiddleware)
@@ -30,5 +30,3 @@ const createMyStore = (rootReducer) => {
 
   return store
 }
-
-export default createMyStore

@@ -1,7 +1,7 @@
 import { CompositeDecorator, Entity } from 'draft-js'
 import React from 'react'
-import { Tooltip } from 'antd'
 import createReactClass from 'create-react-class'
+import { Tooltip } from 'antd'
 import styles from './EditorDecorator.scss'
 
 // Link
@@ -50,7 +50,7 @@ function findReplaceEntities(contentBlock, callback) {
 		callback
 	)
 }
-const Replace = React.createClass({
+const Replace = createReactClass({
 	render(){
 		const {
 			entityKey,
@@ -80,7 +80,7 @@ function findDeleteEntities(contentBlock, callback) {
 		callback
 	)
 }
-const Delete = React.createClass({
+const Delete = createReactClass({
 	render(){
 		const {
 			entityKey,
@@ -110,7 +110,7 @@ function findInsertEntities(contentBlock, callback) {
 		callback
 	)
 }
-const Insert = React.createClass({
+const Insert = createReactClass({
 	render(){
 		const {
 			entityKey,

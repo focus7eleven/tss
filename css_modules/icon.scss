@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'simuicon';
+    src: url('./fonts/icomoon.eot?873yhj');
+    src: local('fonts'), url('./fonts/icomoon.eot?873yhj#iefix') format("embedded-opentype"),
+    url("./fonts/icomoon.ttf?873yhj") format("truetype"),
+    url("./fonts/icomoon.woff?873yhj") format("woff"),
+    url("./fonts/icomoon.svg?873yhj#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin iconfont-mixin {
+    display: inline-block;
+    font-style: normal;
+    vertical-align: baseline;
+    text-align: center;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &:before {
+        display: block;
+        font-family: "simuicon" !important;
+    }
+}
+
+.simuicon-dropzone {
+    @include iconfont-mixin;
+
+    &:before {
+        display: inline-block;
+        content: '\e914';
+        vertical-align: middle;
+        height: 27px;
+        width: 27px;
+    }
+}
+
+.simuicon-zoomout {
+    @include iconfont-mixin;
+
+    &:before {
+        content: '\e912';
+        cursor: pointer;
+    }
+}
+
+.simuicon-link {
+    @include iconfont-mixin;
+
+    &:before {
+        content: '\e910';
+    }
+}
+
+.simuicon-zoomin {
+    @include iconfont-mixin;
+
+    &:before {
+        content: '\e900';
+        cursor: pointer;
+    }
+}
+
+.simuicon-alignleft {
+    @include iconfont-mixin;
+
+    &:before {
+        content: '\e904';
+    }
+}
+
+.simuicon-aligncenter {
+    @include iconfont-mixin;
+
+    &:before {
+        content: '\e913';
+    }
+}
+
+.simuicon-alignright {
+    @include iconfont-mixin;
+
+    &:before {
+        content: '\e908';
+    }
+}
+
+.simuicon-formatequote {
+    @include iconfont-mixin;
+
+    &:before {
+        content: '\e90f';
+    }
+}
+
+.simuicon-formatebold {
+    @include iconfont-mixin;
+
+    &:before {
+        content: '\e909';
+    }
+}
+
+.simuicon-formateitalic {
+    @include iconfont-mixin;
+
+    &:before {
+        content: '\e90e';
+    }
+}
+
+.simuicon-h3 {
+    @include iconfont-mixin;
+
+    &:before {
+        content: '\e901';
+    }
+}
+
+.simuicon-h2 {
+    @include iconfont-mixin;
+
+    &:before {
+        content: '\e902';
+    }
+}
+
+.simuicon-h1 {
+    @include iconfont-mixin;
+
+    &:before {
+        content: '\e903';
+    }
+}
+
+.simuicon-codeblock {
+    @include iconfont-mixin;
+
+    &:before {
+        content: '\e907';
+    }
+}
+
+.simuicon-photo {
+    @include iconfont-mixin;
+
+    &:before {
+        content: '\e911';
+    }
+}
+
+.simuicon-video {
+    @include iconfont-mixin;
+
+    &:before {
+        content: '\e916';
+    }
+}
+
+.simuicon-table {
+    @include iconfont-mixin;
+
+    &:before {
+        content: '\e905';
+    }
+}

@@ -162,10 +162,10 @@ class VideoComponent extends React.Component {
 
 class BlockStyleButton extends React.Component {
 	static propTypes = {
-		editorState: React.PropTypes.object.isRequired,
-		type: React.PropTypes.object.isRequired,
-		onChange: React.PropTypes.func.isRequired,
-		isMarkDownMode: React.PropTypes.bool,
+		editorState: PropTypes.object.isRequired,
+		type: PropTypes.object.isRequired,
+		onChange: PropTypes.func.isRequired,
+		isMarkDownMode: PropTypes.bool,
 	}
 
 	handleClick = e => {
@@ -271,11 +271,11 @@ class BlockStyleButton extends React.Component {
 
 class InlineStyleButton extends React.Component {
 	static propTypes = {
-		editorState: React.PropTypes.object.isRequired,
-		type: React.PropTypes.object.isRequired,
-		onChange: React.PropTypes.func.isRequired,
-		isMarkDownMode: React.PropTypes.bool.isRequired,
-		enable: React.PropTypes.bool.isRequired,
+		editorState: PropTypes.object.isRequired,
+		type: PropTypes.object.isRequired,
+		onChange: PropTypes.func.isRequired,
+		isMarkDownMode: PropTypes.bool.isRequired,
+		enable: PropTypes.bool.isRequired,
 	}
 
 	handleClick = e => {
@@ -401,11 +401,11 @@ class InlineStyleButton extends React.Component {
 
 class InlineColorButton extends React.Component {
 	static propTypes = {
-		editorState: React.PropTypes.object.isRequired,
-		label: React.PropTypes.string.isRequired,
-		onChange: React.PropTypes.func.isRequired,
-		style: React.PropTypes.string.isRequired,
-		afterToggle: React.PropTypes.func.isRequired,
+		editorState: PropTypes.object.isRequired,
+		label: PropTypes.string.isRequired,
+		onChange: PropTypes.func.isRequired,
+		style: PropTypes.string.isRequired,
+		afterToggle: PropTypes.func.isRequired,
 	}
 
 	handleToggle = e => {
@@ -534,10 +534,10 @@ const EditorControl = createReactClass({
 	propTypes: {
 		onChange: PropTypes.func.isRequired,
 		onImageUpload: PropTypes.func.isRequired,
-		onEnterFullscreen: React.PropTypes.func.isRequired,
-		isFullscreenMode: React.PropTypes.bool.isRequired,
-		isMarkDownMode: React.PropTypes.bool.isRequired,
-		onChangeMarkDownMode: React.PropTypes.func.isRequired,
+		onEnterFullscreen: PropTypes.func.isRequired,
+		isFullscreenMode: PropTypes.bool.isRequired,
+		isMarkDownMode: PropTypes.bool.isRequired,
+		onChangeMarkDownMode: PropTypes.func.isRequired,
 		editorState: PropTypes.object.isRequired,
 		className: PropTypes.string,
 		affair: PropTypes.object,
@@ -851,7 +851,7 @@ const EditorControl = createReactClass({
 		const entityKey = Entity.create('table', 'MUTABLE', {
 			columnCount: col,
 			rowCount: row,
-			data:_.map(_.range(row), () => (_.range(col).fill(' ')))
+			data:_.map(_.range(row), () => (_.range(col).fill('')))
 		})
 		const nextEditorState = AtomicBlockUtils.insertAtomicBlock(editorState, entityKey, ' ')
 		this.props.onChange(nextEditorState)

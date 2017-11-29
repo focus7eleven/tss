@@ -6,6 +6,8 @@ import { fromJS } from 'immutable'
 import { Input } from 'antd'
 import styles from './Table.scss'
 
+const { TextArea } = Input
+
 const Table = createReactClass({
 	componentWillMount(){
 		this.setState({
@@ -48,7 +50,7 @@ const Table = createReactClass({
 
 		return (
 			<td key={col} className={styles.grid}>
-				<Input
+				{/* <Input
 					disabled={!this.props.blockProps.isEditable}
 					style={{ fontWeight: row ? 'normal' : 'bold' }}
 					onChange={(e) => {this.handleGridChange(row, col, e)}}
@@ -57,6 +59,15 @@ const Table = createReactClass({
 					onBlur={this.handleGridBlur}
 					type="textarea"
 					autosize
+				/> */}
+				<TextArea
+					disabled={!this.props.blockProps.isEditable}
+					style={{ fontWeight: row ? 'normal' : 'bold' }}
+					onChange={(e) => {this.handleGridChange(row, col, e)}}
+					value={this.state.tableData.getIn([row, col])}
+					onFocus={() => {onStartEdit(blockKey)}}
+					onBlur={this.handleGridBlur}
+					autosize={{minRows: 1, maxRows: 99}}
 				/>
 			</td>
 		)

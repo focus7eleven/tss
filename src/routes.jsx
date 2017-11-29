@@ -2,6 +2,7 @@ import React from 'react'
 import Bundle from './components/route/Bundle'
 import AppContainer from './containers/AppContainer'
 import AnnouncementEditor from 'bundle-loader?lazy!./components/editor/AnnouncementEditor'
+import TestContainer from 'bundle-loader?lazy!./containers/test/TestContainer'
 
 const Loading = () => (<div>Loading...</div>)
 
@@ -25,9 +26,14 @@ const routes = [{
     exact: true,
     component: createComponent(AppContainer)
   }, {
-    path: '/draft',
+    path: '/test',
     exact: true,
-    component: createComponent(AnnouncementEditor)
+    component: createComponent(TestContainer),
+    routes: [{
+      path: '/test/editor',
+      // exact: true,
+      component: createComponent(AnnouncementEditor)
+    }]
   }]
 }]
 

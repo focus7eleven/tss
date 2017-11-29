@@ -7,11 +7,15 @@ import React from 'react'
 import { AppContainer } from 'react-hot-loader'
 import MyAppContainer from './client'
 import registerServiceWorker from './registerServiceWorker'
+import { createMyStore } from './store'
+import reducer from './reducer'
+
+const store = createMyStore(reducer)
 
 const render = (Component) => {
   ReactDOM.render(
     <AppContainer>
-      <Component />
+      <Component store={store} />
     </AppContainer>, document.getElementById('root'))
 }
 

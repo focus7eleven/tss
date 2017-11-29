@@ -2,14 +2,12 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import { HashRouter as Router } from 'react-router-dom'
 import Children from './components/route/SubRoute'
-import createMyStore from './store'
-import reducer from './reducer'
 import routes from './routes'
-
-const store = createMyStore(reducer)
+import 'common.scss'
 
 export default class WrapperComponent extends React.Component {
   render() {
+    const store = this.props.store
     return (
       <Provider store={store}>
         <Router>
