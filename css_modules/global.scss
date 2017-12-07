@@ -1,47 +1,47 @@
 @import "./theme.scss";
 
 .u-text-13, .u-text-14, .u-text-16, .u-text-12 {
-    color: $text-color;
+  color: $text-color;
 }
 
 .u-text-13 {
-    font-size: 13px;
+  font-size: 13px;
 }
 
 .u-text-14 {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .u-text-16 {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .u-text-12 {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .u-text-l-12, .u-text-l-13, .u-text-l-14 {
-    color: $normal-color;
+  color: $normal-color;
 }
 
 .u-text-l-14 {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .u-text-l-13 {
-    font-size: 13px;
+  font-size: 13px;
 }
 
 .u-text-l-12 {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .u-link-12 {
-    color: $link-color;
-    transition: color 0.3s;
-    cursor: pointer;
+  color: $link-color;
+  transition: color 0.3s;
+  cursor: pointer;
 
-    &:hover {
-        color: $link-active-color;
-    }
+  &:hover {
+    color: $link-active-color;
+  }
 }

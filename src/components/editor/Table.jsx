@@ -50,16 +50,6 @@ const Table = createReactClass({
 
 		return (
 			<td key={col} className={styles.grid}>
-				{/* <Input
-					disabled={!this.props.blockProps.isEditable}
-					style={{ fontWeight: row ? 'normal' : 'bold' }}
-					onChange={(e) => {this.handleGridChange(row, col, e)}}
-					value={this.state.tableData.getIn([row, col])}
-					onFocus={() => {onStartEdit(blockKey)}}
-					onBlur={this.handleGridBlur}
-					type="textarea"
-					autosize
-				/> */}
 				<TextArea
 					disabled={!this.props.blockProps.isEditable}
 					style={{ fontWeight: row ? 'normal' : 'bold' }}

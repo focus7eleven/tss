@@ -493,7 +493,7 @@ class ColorPickerIcon extends React.Component {
 }
 
 class TableModal extends React.Component {
-	static PropTypes = {
+	static propTypes = {
 		visibility:PropTypes.bool,
 		onOK:PropTypes.func,
 		onCancel:PropTypes.func
